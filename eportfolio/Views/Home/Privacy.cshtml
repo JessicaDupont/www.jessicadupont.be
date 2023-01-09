@@ -1,6 +1,47 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Contact";
 }
 <h1>@ViewData["Title"]</h1>
+<div class="container">
+    <div class="row">
+        @*<section class="col">
+        <h2>Formulaire</h2>
+            <form method="post">
+                <div class="input-group mb-3">
+                    <label for="nom" id="nom" class="input-group-text">Nom</label><br />
+                    <input type="text" name="nom" value="" class="form-control" aria-describedby="nom" />
+                </div>
+                <div class="input-group mb-3">
+                    <label for="email" id="email" class="input-group-text">Email</label><br />
+                    <input type="email" name="email" value="" class="form-control" aria-describedby="email" />
+                </div>
+                <div class="input-group mb-3">
+                    <label for="message" class="input-group-text">Message</label><br />
+                    <textarea name="message" rows="5" class="form-control" aria-describedby="Message"></textarea>
+                </div>
+                <input type="submit" value="Envoyer" class="submit"/>
+            </form>
+        </section>*@
 
-<p>Use this page to detail your site's privacy policy.</p>
+        <section class="col">
+        <h2>Mes données</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <img src="~/img/jessicadupont.jpg" height="150px" width="150px"/>
+                </div>
+                <address class="col">
+                    <p>Jessica Dupont</p>
+                    <p>Téléphone : <a href="tel:+32479345784">0032 479 345 784</a></p>
+                    <p>Email : <a href="mailto:contact@ica.plus">contact@ica.plus</a></p>
+                    <p>Adresse : 
+                        <br />Rue de la source, 5/1
+                        <br />4570 Marchin
+                        <br />BELGIQUE
+                    </p>
+                </address>
+            </div>
+        </div>
+        </section>
+    </div>
+</div>
