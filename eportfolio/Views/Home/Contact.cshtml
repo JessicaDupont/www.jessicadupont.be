@@ -1,0 +1,66 @@
+﻿@model eportfolio.Models.Forms.ContactForm
+
+@{
+    ViewData["Title"] = "Contact";
+}
+<h1>@ViewData["Title"]</h1>
+<div class="container">
+    <div class="row">
+        <section class="col">
+            <h2>Formulaire</h2>
+            <hr />
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-action="Contact">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Expediteur" class="control-label"></label>
+                            <input asp-for="Expediteur" class="form-control" />
+                            <span asp-validation-for="Expediteur" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email" class="control-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Message" class="control-label"></label>
+                            <input asp-for="Message" class="form-control" />
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="col">
+            <h2>Jessica Dupont</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="~/img/jessicadupont.jpg" height="150px" width="150px" />
+                    </div>
+                    <address class="col">
+                        <p>téléphone : <a href="tel:+32479345784">0032 479 345 784</a></p>
+                        <p>email : <a href="mailto:contact@ica.plus">contact@ica.plus</a></p>
+                        <p>
+                            adresse :
+                            <br />rue de la source, 5/1
+                            <br />4570 marchin
+                            <br />belgique
+                        </p>
+                    </address>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
